@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Lista de Organizadores</title>
 </head>
 <body>
@@ -8,8 +9,11 @@
     <ul>
         {% for organizador in organizadores %}
             <li>{{ organizador.nombre }}</li>
+        {% empty %}
+            <li>No hay organizadores disponibles.</li>
         {% endfor %}
     </ul>
-    <a href="{% url 'organizador_create' %}">Crear nuevo organizador</a>
+    <a href="{% url 'organizador_create' %}">Crear Nuevo Organizador</a> |
+    <a href="{% url 'lista_eventos' %}">Ir a la Lista de Eventos</a> 
 </body>
 </html>

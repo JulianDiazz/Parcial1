@@ -15,5 +15,4 @@ urlpatterns = [
     path('organizadores/crear/', OrganizadorCreateView.as_view(), name='organizador_create'),
     path('eventos/<int:pk>/editar/', EventoUpdateView.as_view(), name='editar_evento'),  
     path('login/', auth_views.LoginView.as_view(), name='login'),
-    
 ]
